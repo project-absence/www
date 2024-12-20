@@ -1,6 +1,6 @@
 {
   "name": "project-absence-documentation",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "prettify": "npx prettier --write .",
@@ -19,20 +19,20 @@
     "@docusaurus/plugin-content-docs": "^3.6.3",
     "@docusaurus/plugin-sitemap": "^3.6.3",
     "@docusaurus/preset-classic": "^3.6.3",
-    "@fortawesome/fontawesome-svg-core": "^6.7.1",
-    "@fortawesome/free-brands-svg-icons": "^6.7.1",
-    "@fortawesome/free-regular-svg-icons": "^6.7.1",
-    "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@mdx-js/react": "^3.1.0",
-    "@xyflow/react": "^12.3.5",
+    "@xyflow/react": "^12.3.6",
     "clsx": "^2.1.1",
     "dagre": "^0.8.5",
-    "prettier": "^3.3.3",
-    "prism-react-renderer": "^2.4.0",
+    "prettier": "^3.4.2",
+    "prism-react-renderer": "^2.4.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-modal": "^3.16.1"
+    "react-modal": "^3.16.3"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.6.3",

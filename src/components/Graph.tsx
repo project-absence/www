@@ -94,8 +94,7 @@ export default function Graph({ data }: GraphProps) {
         return (
           <HostnameModal
             label={selectedNodeData.label}
-            recent={selectedNodeData.recent}
-            expired={selectedNodeData.expired}
+            flags={selectedNodeData.flags}
             ports={selectedNodeData.ports}
           />
         );

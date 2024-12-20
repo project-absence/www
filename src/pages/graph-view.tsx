@@ -12,11 +12,18 @@ const EXAMPLE_DATA = {
   connections: [
     {
       type: "hostname",
+      value: "radar.krypton.ninja",
+      connections: [],
+      data: {
+        flags: 1,
+      },
+    },
+    {
+      type: "hostname",
       value: "krypton-assistant.krypton.ninja",
       connections: [],
       data: {
-        recent: false,
-        expired: false,
+        flags: 3,
       },
     },
     {
@@ -24,8 +31,7 @@ const EXAMPLE_DATA = {
       value: "api.krypton.ninja",
       connections: [],
       data: {
-        expired: false,
-        recent: false,
+        flags: 0,
       },
     },
     {
@@ -33,8 +39,7 @@ const EXAMPLE_DATA = {
       value: "status.krypton.ninja",
       connections: [],
       data: {
-        expired: false,
-        recent: false,
+        flags: 0,
       },
     },
     {
@@ -42,8 +47,7 @@ const EXAMPLE_DATA = {
       value: "www.krypton.ninja",
       connections: [],
       data: {
-        expired: false,
-        recent: false,
+        flags: 0,
       },
     },
     {
@@ -51,8 +55,7 @@ const EXAMPLE_DATA = {
       value: "beta.krypton.ninja",
       connections: [],
       data: {
-        recent: false,
-        expired: true,
+        flags: 2,
       },
     },
   ],

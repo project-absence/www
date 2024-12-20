@@ -1,3 +1,4 @@
+import { checkFlag, HostnameFlags } from "@site/src/utils/flags";
 import { getServiceIcon } from "@site/src/utils/service-icon";
 import Badge from "../Badge";
 import NodeDetails from "../NodeDetails";
@@ -9,17 +10,17 @@ type OpenPort = {
 
 type HostnameModalProps = {
   label: string;
-  expired: boolean;
-  recent: boolean;
+  flags: number;
   ports?: OpenPort[] | undefined;
 };
 
 export default function HostnameModal({
   label,
-  expired,
-  recent,
+  flags,
   ports,
 }: HostnameModalProps) {
+  const expired = checkFlag(flags, HostnameFlags.HAS_EXPIRED);
+  const recent = checkFlag(flags, HostnameFlags.IS_RECENT);
   return (
     <div className="container">
       <div className="row margin-top--md margin-bottom--md">
