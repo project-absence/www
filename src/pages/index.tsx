@@ -35,12 +35,6 @@ export default function Home() {
               </a>
             </p>
             <p className="spaced">
-              <a href="https://discord.gg/mTBrXyWxAF">
-                <img
-                  src="https://img.shields.io/discord/739934735387721768?logo=discord"
-                  alt="Discord Server Badge"
-                />
-              </a>{" "}
               <a href="https://github.com/project-absence/project-absence/commits/main">
                 <img
                   src="https://img.shields.io/github/last-commit/project-absence/project-absence"

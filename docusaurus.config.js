@@ -2,8 +2,8 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const { themes } = require("prism-react-renderer");
-const lightCodeTheme = themes.github;
-const darkCodeTheme = themes.dracula;
+const lightCodeTheme = themes.oneLight;
+const darkCodeTheme = themes.oneDark;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -136,11 +136,6 @@ const config = {
             label: "GitHub",
             position: "right",
           },
-          {
-            href: "https://discord.gg/mTBrXyWxAF",
-            label: "Discord",
-            position: "right",
-          },
         ],
       },
       footer: {
@@ -182,10 +177,6 @@ const config = {
                 label: "Security Policy",
                 to: "/community/security-policy",
               },
-              {
-                label: "Discord",
-                href: "https://discord.gg/mTBrXyWxAF",
-              },
             ],
           },
         ],
@@ -194,6 +185,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ["toml"],
       },
     }),
 };
