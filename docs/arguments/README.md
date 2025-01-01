@@ -31,6 +31,10 @@ The file path of where the resulting JSON database will be saved to (**Default**
 
 Whether to copy the resulting JSON database to the clipboard
 
+#### `--version` / `-V`
+
+Display the version of the tool
+
 #### `--debug` / `-D`
 
 Whether to print the database at the end of execution in a tree format and some other debugging data
