@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://docs.projectabsence.org/sitemap.xml
+Sitemap: https://projectabsence.org/sitemap.xml

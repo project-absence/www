@@ -1,77 +1,57 @@
-import Admonition from "@theme/Admonition";
+import {
+  faApple,
+  faDocker,
+  faLinux,
+  faWindows,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "@theme/Layout";
 
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
+
 export default function Home() {
+  // TODO: Write this entire page better
   return (
-    <Layout title={`Project Absence`} description="👁️ Uncover the unseen">
+    <Layout title={"Project Absence"} description="👁️ Uncover the unseen">
       <main>
         <div className="container padding-top--md padding-bottom--lg">
-          <div className="markdown">
+          <div style={{ textAlign: "center" }} className="markdown">
             <h1>Project Absence</h1>
-            <p className="spaced">
-              <a href="https://docs.rs/project-absence">
-                <img
-                  src="https://img.shields.io/badge/docs.rs-project--absence-61c192.svg"
-                  alt="Docs.rs Badge"
-                />
-              </a>{" "}
-              <a href="https://crates.io/crates/project-absence">
-                <img
-                  src="https://img.shields.io/crates/v/project-absence.svg?color=fe7d37"
-                  alt="Crates.io Badge"
-                />
-              </a>{" "}
-              <a href="https://github.com/project-absence/project-absence/actions">
-                <img
-                  src="https://github.com/project-absence/project-absence/actions/workflows/ci.yml/badge.svg"
-                  alt="CI Badge"
-                />
-              </a>{" "}
-              <a href="https://deps.rs/repo/github/project-absence/project-absence">
-                <img
-                  src="https://deps.rs/repo/github/project-absence/project-absence/status.svg"
-                  alt="Dependency Status Badge"
-                />
-              </a>
-            </p>
-            <p className="spaced">
-              <a href="https://github.com/project-absence/project-absence/commits/main">
-                <img
-                  src="https://img.shields.io/github/last-commit/project-absence/project-absence"
-                  alt="Last Commit Badge"
-                />
-              </a>{" "}
-              <a href="https://conventionalcommits.org/en/v1.0.0/">
-                <img
-                  src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white"
-                  alt="Conventional Commits Badge"
-                />
-              </a>
-            </p>
-            <Admonition type="caution" title="Warning">
-              <p>
-                This is a WIP tool that is <strong>very unstable</strong> and{" "}
-                <strong>not fully optimised</strong>, use at your own care! This
-                page will also be reworked.
-              </p>
-            </Admonition>
-            <p>Uncover the unseen</p>
-            <h2 id="contributing">Contributing</h2>
+            <img src="/assets/purple.png" height="20%" width="20%" />
             <p>
-              People may contribute by following the{" "}
-              <a href="/community/contributing-guidelines/">
-                Contributing Guidelines
-              </a>{" "}
-              and the <a href="/community/code-of-conduct/">Code of Conduct</a>.
+              <strong>👁️ Uncover the unseen</strong>
             </p>
-            <h2 id="license">License</h2>
             <p>
-              This library was made with 💜 by Krypton and is under the{" "}
-              <a href="https://github.com/project-absence/project-absence/blob/main/LICENSE.md">
-                MIT License
-              </a>
-              .
+              Project Absence is a tool for analyzing websites. Its features
+              include finding open ports, discovering subdomains, discovering
+              files and more will be coming with the time.
             </p>
+            <div className="margin-bottom--xl">
+              <a href="/docs" className="button button--primary">
+                Documentation
+              </a>
+              <a
+                href="/graph-view"
+                className="button button--secondary button--outline margin-left--md"
+              >
+                View tool results as graph
+              </a>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                gap: "20px",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <FontAwesomeIcon size="3x" icon={faLinux} />
+              <FontAwesomeIcon size="3x" icon={faApple} />
+              <FontAwesomeIcon size="3x" icon={faWindows} />
+              <FontAwesomeIcon size="3x" icon={faDocker} />
+            </div>
           </div>
         </div>
       </main>

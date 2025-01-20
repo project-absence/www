@@ -9,9 +9,9 @@ const darkCodeTheme = themes.oneDark;
 const config = {
   title: "Project Absence",
   tagline: "👁️ Uncover the unseen",
-  // favicon: "img/favicon.ico",
+  favicon: "assets/purple.png",
 
-  url: "https://docs.projectabsence.org",
+  url: "https://projectabsence.org",
   baseUrl: "/",
 
   organizationName: "project-absence",
@@ -33,12 +33,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl:
-            "https://github.com/project-absence/project-absence/tree/main/documentation/",
-        },
-        blog: {
-          showReadingTime: true,
-          onUntruncatedBlogPosts: "ignore",
+          editUrl: "https://github.com/project-absence/website/tree/main",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -107,33 +102,29 @@ const config = {
         title: "Project Absence",
         logo: {
           alt: "Project Absence Logo",
-          src: "https://github.com/kkrypt0nn.png",
+          src: "/assets/purple.png",
         },
         items: [
           {
-            type: "doc",
-            docId: "installation/README",
-            label: "Documentation",
-            position: "left",
-          },
-          {
             to: "/graph-view",
             label: "Graph View",
-            position: "left",
+            position: "right",
           },
           {
-            to: "/blog",
-            position: "left",
-            label: "Blog",
+            type: "doc",
+            docId: "README",
+            label: "Documentation",
+            position: "right",
           },
           {
             to: "/community/code-of-conduct",
             label: "Community",
-            position: "left",
+            position: "right",
           },
           {
             href: "https://github.com/project-absence/project-absence",
-            label: "GitHub",
+            "aria-label": "GitHub",
+            className: "header-github-link",
             position: "right",
           },
         ],
@@ -142,19 +133,15 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Project Absence",
             items: [
-              {
-                label: "Documentation",
-                to: "/docs/installation/",
-              },
               {
                 label: "Graph View",
                 to: "/graph-view",
               },
               {
-                label: "Blog",
-                to: "/blog/",
+                label: "Documentation",
+                to: "/docs",
               },
               {
                 label: "Community",
