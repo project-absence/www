@@ -5,7 +5,7 @@ description: The config file is the file that is used to configure each module i
 
 The config file is the file that is used to configure each module individually. Its **default path** is `~/.absence/config.toml` and has the following **default content**:
 
-```toml
+```toml title="~/.absence/config.toml"
 [enumerate_files]
 enabled = false
 

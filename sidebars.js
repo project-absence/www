@@ -6,7 +6,11 @@ const sidebars = {
     {
       type: "category",
       label: "Installation",
-      items: ["installation/docker"],
+      items: [
+        "installation/docker",
+        "installation/cargo",
+        "installation/from-source",
+      ],
       collapsed: false,
     },
     {
