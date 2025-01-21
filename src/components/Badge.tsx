@@ -17,8 +17,7 @@ type BadgeProps = {
 export default function Badge({ content, type, icon }: BadgeProps) {
   return (
     <span className={`badge badge--${type === undefined ? "primary" : type}`}>
-      {icon && <FontAwesomeIcon icon={icon}></FontAwesomeIcon>}
-      {content}
+      {icon && <FontAwesomeIcon icon={icon}></FontAwesomeIcon>} {content}
     </span>
   );
 }

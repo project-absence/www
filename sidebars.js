@@ -19,6 +19,17 @@ const sidebars = {
       items: ["usage/arguments", "usage/config"],
       collapsed: false,
     },
+    {
+      type: "category",
+      label: "Modules",
+      items: [
+        "modules/enumerate_files",
+        "modules/enumerate_subdomains",
+        "modules/passive_dns",
+        "modules/port_scanner",
+      ],
+      collapsed: false,
+    },
   ],
 };
 

@@ -1,0 +1,17 @@
+---
+title: Enumerate Files
+description: This module will aggressively try to find files based on the given wordlist and extension.
+---
+
+import NoiseLevel from "@site/src/components/NoiseLevel";
+
+<NoiseLevel level="high" />
+
+This module will aggressively try to find files based on the given wordlist and extension.
+
+## Configuration
+
+| Parameter         | Description                                                     | Default                             |
+| ----------------- | --------------------------------------------------------------- | ----------------------------------- |
+| `wordlist`        | The path to the wordlist to use for this module.                | Fallback to `wordlist` CLI argument |
+| `files_extension` | The extension to append to the file names, **without** the dot. | `php`                               |

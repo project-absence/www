@@ -1,0 +1,23 @@
+---
+title: Port Scanner
+description: This module will check if the most common ports are open.
+---
+
+import NoiseLevel from "@site/src/components/NoiseLevel";
+
+<NoiseLevel level="high" />
+
+This module will check if the most common ports are open.
+
+## Configuration
+
+| Parameter | Description                                       | Default                            |
+| --------- | ------------------------------------------------- | ---------------------------------- |
+| `range`   | The range of port to scan for (always inclusive). | Top 1000 most common ports of nmap |
+
+### Example(s)
+
+#### `range`
+
+- `1-20` -> Port 1 to 20
+- `1-20,22,40-60` -> Port 1 to 20, port 22 and port 40 to 60
