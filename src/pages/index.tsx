@@ -9,6 +9,8 @@ import Layout from "@theme/Layout";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { faFlask } from "@fortawesome/free-solid-svg-icons";
+import Badge from "../components/Badge";
 config.autoAddCss = false;
 
 export default function Home() {
@@ -36,7 +38,8 @@ export default function Home() {
                 href="/graph-view"
                 className="button button--secondary button--outline margin-left--md"
               >
-                View tool results as graph
+                View tool results as graph{" "}
+                <Badge content="BETA" icon={faFlask} />
               </a>
             </div>
             <div

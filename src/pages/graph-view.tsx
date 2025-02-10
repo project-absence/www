@@ -1,9 +1,11 @@
 import BrowserOnly from "@docusaurus/BrowserOnly";
+import { faFlask } from "@fortawesome/free-solid-svg-icons";
 import Admonition from "@theme/Admonition";
 import CodeBlock from "@theme/CodeBlock";
 import Layout from "@theme/Layout";
 import "@xyflow/react/dist/style.css";
 import { useEffect, useRef, useState } from "react";
+import Badge from "../components/Badge";
 import Graph from "../components/Graph";
 
 const EXAMPLE_DATA = {
@@ -151,7 +153,9 @@ export default function GraphView() {
       <main>
         <div className="container padding-top--md padding-bottom--lg">
           <div className="markdown">
-            <h1>Graph View</h1>
+            <h1>
+              Graph View <Badge content="BETA" icon={faFlask} />
+            </h1>
             {error && (
               <Admonition type="danger" title="Error">
                 <p>{error}</p>
