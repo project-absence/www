@@ -14,18 +14,10 @@ const EXAMPLE_DATA = {
   connections: [
     {
       type: "hostname",
-      value: "radar.krypton.ninja",
-      connections: [],
-      data: {
-        flags: 1,
-      },
-    },
-    {
-      type: "hostname",
       value: "krypton-assistant.krypton.ninja",
       connections: [],
       data: {
-        flags: 3,
+        flags: 0,
       },
     },
     {
@@ -39,6 +31,14 @@ const EXAMPLE_DATA = {
     {
       type: "hostname",
       value: "status.krypton.ninja",
+      connections: [],
+      data: {
+        flags: 0,
+      },
+    },
+    {
+      type: "hostname",
+      value: "radar.krypton.ninja",
       connections: [],
       data: {
         flags: 0,
@@ -62,26 +62,26 @@ const EXAMPLE_DATA = {
     },
   ],
   data: {
-    ports: [
-      {
-        port: 80,
-        potential_service: "http",
+    banners: {
+      "443": {
+        type: "http",
+        server: "cloudflare",
+        title: "Krypton",
       },
+      "80": {
+        type: "http",
+        server: "cloudflare",
+        title: "Krypton",
+      },
+    },
+    ports: [
       {
         port: 443,
         potential_service: "https",
       },
       {
-        port: 1337,
-        potential_service: "unknown",
-      },
-      {
-        port: 8080,
-        potential_service: "http-proxy",
-      },
-      {
-        port: 8443,
-        potential_service: "https",
+        port: 80,
+        potential_service: "http",
       },
     ],
   },

@@ -96,6 +96,7 @@ export default function Graph({ data }: GraphProps) {
             label={selectedNodeData.label}
             flags={selectedNodeData.flags}
             ports={selectedNodeData.ports}
+            banners={selectedNodeData.banners}
           />
         );
     }
