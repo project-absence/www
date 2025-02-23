@@ -17,18 +17,26 @@ const sidebars = {
       type: "category",
       label: "Usage",
       items: ["usage/arguments", "usage/config"],
-      collapsed: false,
+      collapsed: true,
     },
     {
       type: "category",
       label: "Modules",
       items: [
+        "modules/banner_grabber",
+        "modules/dork",
         "modules/enumerate_files",
         "modules/enumerate_subdomains",
         "modules/passive_dns",
         "modules/port_scanner",
       ],
-      collapsed: false,
+      collapsed: true,
+    },
+    {
+      type: "category",
+      label: "Scripting",
+      items: ["scripting/basics"],
+      collapsed: true,
     },
   ],
 };
