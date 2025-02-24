@@ -52,11 +52,12 @@ function createBanner(port: number, data: any): IBanner {
   }
 }
 
-type BannerData = { server?: string; title?: string } | { version?: string };
+type BannerData = { server?: string; title?: string };
 
 type HostnameModalProps = {
   label: string;
   flags: number;
+  screenshot?: string;
   ports?: Port[];
   banners?: { [key: string]: BannerData };
 };
@@ -64,6 +65,7 @@ type HostnameModalProps = {
 export default function HostnameModal({
   label,
   flags,
+  screenshot,
   ports,
   banners,
 }: HostnameModalProps) {
@@ -142,6 +144,11 @@ export default function HostnameModal({
           </div>
         </div>
       </div>
+      {screenshot && !screenshot.endsWith(".png") && (
+        <NodeDetails title="Screenshot">
+          <img src={`data:image/png;base64,${screenshot}`} />
+        </NodeDetails>
+      )}
       {renderPorts()}
     </div>
   );

@@ -95,6 +95,7 @@ export default function Graph({ data }: GraphProps) {
           <HostnameModal
             label={selectedNodeData.label}
             flags={selectedNodeData.flags}
+            screenshot={selectedNodeData.screenshot}
             ports={selectedNodeData.ports}
             banners={selectedNodeData.banners}
           />

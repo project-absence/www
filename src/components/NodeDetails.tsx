@@ -14,7 +14,7 @@ export default function NodeDetails({ title, children }: NodeDetailsProps) {
         borderRadius: "6px",
         borderStyle: "solid",
       }}
-      className="padding-vert--sm padding-horiz--md"
+      className="padding-vert--sm padding-horiz--md margin-top--md margin-bottom--md"
     >
       <summary>
         <strong>{title}</strong>
