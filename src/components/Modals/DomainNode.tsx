@@ -1,4 +1,4 @@
-import { checkFlag, HostnameFlags } from "@site/src/utils/flags";
+import { checkFlag, DomainFlags } from "@site/src/utils/flags";
 import { getServiceIcon } from "@site/src/utils/service-icon";
 import Badge from "../Badge";
 import NodeDetails from "../NodeDetails";
@@ -13,16 +13,28 @@ interface IBanner {
 }
 
 class HttpBanner implements IBanner {
+  content_type?: string;
+  allow?: string;
   server?: string;
   title?: string;
 
-  constructor(data: { server?: string; title?: string }) {
+  constructor(data: {
+    content_type?: string;
+    allow?: string;
+    server?: string;
+    title?: string;
+  }) {
+    this.content_type = data.content_type;
+    this.allow = data.allow;
     this.server = data.server;
     this.title = data.title;
   }
 
   display(): string {
     const entries = [];
+    if (this.content_type)
+      entries.push({ key: "http-content-type", value: this.content_type });
+    if (this.allow) entries.push({ key: "http-allow", value: this.allow });
     if (this.server)
       entries.push({ key: "http-server-header", value: this.server });
     if (this.title) entries.push({ key: "http-title", value: this.title });
@@ -54,7 +66,7 @@ function createBanner(port: number, data: any): IBanner {
 
 type BannerData = { server?: string; title?: string };
 
-type HostnameModalProps = {
+type DomainModalProps = {
   label: string;
   flags: number;
   screenshot?: string;
@@ -62,15 +74,15 @@ type HostnameModalProps = {
   banners?: { [key: string]: BannerData };
 };
 
-export default function HostnameModal({
+export default function DomainModal({
   label,
   flags,
   screenshot,
   ports,
   banners,
-}: HostnameModalProps) {
-  const expired = checkFlag(flags, HostnameFlags.HAS_EXPIRED);
-  const recent = checkFlag(flags, HostnameFlags.IS_RECENT);
+}: DomainModalProps) {
+  const expired = checkFlag(flags, DomainFlags.HAS_EXPIRED);
+  const recent = checkFlag(flags, DomainFlags.IS_RECENT);
 
   function renderPorts() {
     if (!ports || ports.length === 0) return null;

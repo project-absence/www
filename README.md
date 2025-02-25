@@ -1,41 +1,19 @@
-# Website
+# Project Absence - Website & Documentation
 
-This website is built using [Docusaurus 3](https://docusaurus.io/), a modern static website generator.
+The website serves as the central hub for information about the tool.
 
-### Installation
+## Getting Started
 
-```
-$ yarn
-```
+The website is available at https://projectabsence.org. You can access the documentation of the project and the graph view (**beta**).
 
-### Local Development
+## Documentation
 
-```
-$ yarn start
-```
+Full documentation is available [here](https://projectabsence.org/docs/). It includes details on configuration and usage.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Contributing
 
-### Build
+People may contribute by following the [Contributing Guidelines](https://github.com/project-absence/.github/blob/main/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/project-absence/.github/blob/main/CODE_OF_CONDUCT.md).
 
-```
-$ yarn build
-```
+## License
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+This project was made with 💜 by [Krypton](https://github.com/kkrypt0nn) and is under the [MIT License](https://github.com/project-absence/.github/blob/main/LICENSE.md).

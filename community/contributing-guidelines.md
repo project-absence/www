@@ -43,4 +43,4 @@ to nothing, in common - feel free to ask a maintainer on whether it should be a 
 
 ## License
 
-Your submissions are understood to be under the same [MIT License](https://github.com/project-absence/project-absence/blob/main/LICENSE.md) that covers the project.
+Your submissions are understood to be under the same [MIT License](https://github.com/project-absence/.github/blob/main/LICENSE.md) that covers the project.

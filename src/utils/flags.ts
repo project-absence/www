@@ -1,6 +1,6 @@
 export const ZERO = 0;
 
-export enum HostnameFlags {
+export enum DomainFlags {
   IS_RECENT = 1 << 0,
   HAS_EXPIRED = 1 << 1,
 }
