@@ -33,7 +33,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/project-absence/website/tree/main",
+          editUrl: "https://github.com/project-absence/www/tree/main",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -159,10 +159,6 @@ const config = {
               {
                 label: "Contributing Guidelines",
                 to: "/community/contributing-guidelines",
-              },
-              {
-                label: "Security Policy",
-                to: "/community/security-policy",
               },
             ],
           },

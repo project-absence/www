@@ -9,7 +9,7 @@ import {
 import dagre from "dagre";
 import { useCallback, useState } from "react";
 import Modal from "react-modal";
-import HostnameModal from "./Modals/HostnameNode";
+import DomainModal from "./Modals/DomainNode";
 
 function generateNodesAndEdges(node, parentId = null) {
   const nodes = [
@@ -90,9 +90,9 @@ export default function Graph({ data }: GraphProps) {
 
   const modalContentForNode = () => {
     switch (selectedNodeData.type) {
-      case "hostname":
+      case "domain":
         return (
-          <HostnameModal
+          <DomainModal
             label={selectedNodeData.label}
             flags={selectedNodeData.flags}
             screenshot={selectedNodeData.screenshot}

@@ -26,7 +26,7 @@ export default function Home() {
               <strong>👁️ Uncover the unseen</strong>
             </p>
             <p>
-              Project Absence is a tool for analyzing websites. Its features
+              Project Absence is a tool for analyzing domains. Its features
               include finding open ports, discovering subdomains, discovering
               files and more will be coming with the time.
             </p>

@@ -29,6 +29,7 @@ const sidebars = {
         "modules/enumerate_subdomains",
         "modules/passive_dns",
         "modules/port_scanner",
+        "modules/screenshot_grabber",
       ],
       collapsed: true,
     },

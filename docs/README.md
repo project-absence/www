@@ -7,7 +7,7 @@ displayed_sidebar: sidebar
 
 <div style={{textAlign: "center"}}>
   <img src="/assets/purple.png" height="45%" width="45%" />
-  Project Absence is a tool for analyzing websites. Its features include finding
+  Project Absence is a tool for analyzing domains. Its features include finding
   open ports, discovering subdomains, discovering files and more will be coming with
   the time.
 </div>

@@ -9,11 +9,11 @@ import Badge from "../components/Badge";
 import Graph from "../components/Graph";
 
 const EXAMPLE_DATA = {
-  type: "hostname",
+  type: "domain",
   value: "krypton.ninja",
   connections: [
     {
-      type: "hostname",
+      type: "domain",
       value: "krypton-assistant.krypton.ninja",
       connections: [],
       data: {
@@ -21,7 +21,7 @@ const EXAMPLE_DATA = {
       },
     },
     {
-      type: "hostname",
+      type: "domain",
       value: "api.krypton.ninja",
       connections: [],
       data: {
@@ -29,7 +29,7 @@ const EXAMPLE_DATA = {
       },
     },
     {
-      type: "hostname",
+      type: "domain",
       value: "status.krypton.ninja",
       connections: [],
       data: {
@@ -37,7 +37,7 @@ const EXAMPLE_DATA = {
       },
     },
     {
-      type: "hostname",
+      type: "domain",
       value: "radar.krypton.ninja",
       connections: [],
       data: {
@@ -45,7 +45,7 @@ const EXAMPLE_DATA = {
       },
     },
     {
-      type: "hostname",
+      type: "domain",
       value: "www.krypton.ninja",
       connections: [],
       data: {
@@ -53,7 +53,7 @@ const EXAMPLE_DATA = {
       },
     },
     {
-      type: "hostname",
+      type: "domain",
       value: "beta.krypton.ninja",
       connections: [],
       data: {
@@ -67,11 +67,13 @@ const EXAMPLE_DATA = {
         type: "http",
         server: "cloudflare",
         title: "Krypton",
+        content_type: "text/html; charset=utf-8",
       },
       "80": {
         type: "http",
         server: "cloudflare",
         title: "Krypton",
+        content_type: "text/html; charset=utf-8",
       },
     },
     ports: [
