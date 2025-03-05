@@ -160,6 +160,10 @@ const config = {
                 label: "Contributing Guidelines",
                 to: "/community/contributing-guidelines",
               },
+              {
+                label: "Terms of Use",
+                to: "/community/terms-of-use",
+              },
             ],
           },
         ],
