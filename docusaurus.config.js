@@ -85,7 +85,7 @@ const config = {
           content: "#11111b",
         },
       ],
-      // image: "img/banner.png",
+      image: "assets/banner.png",
       colorMode: {
         defaultMode: "dark",
         disableSwitch: false,
