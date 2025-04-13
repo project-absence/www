@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://projectabsence.org/sitemap.xml
+Sitemap: https://absence.krypton.ninja/sitemap.xml

@@ -11,7 +11,7 @@ const config = {
   tagline: "👁️ Uncover the unseen",
   favicon: "assets/purple.png",
 
-  url: "https://projectabsence.org",
+  url: "https://absence.krypton.ninja",
   baseUrl: "/",
 
   organizationName: "project-absence",
