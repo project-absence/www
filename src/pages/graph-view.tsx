@@ -14,39 +14,7 @@ const EXAMPLE_DATA = {
   connections: [
     {
       type: "domain",
-      value: "krypton-assistant.krypton.ninja",
-      connections: [],
-      data: {
-        flags: 0,
-      },
-    },
-    {
-      type: "domain",
-      value: "api.krypton.ninja",
-      connections: [],
-      data: {
-        flags: 0,
-      },
-    },
-    {
-      type: "domain",
       value: "status.krypton.ninja",
-      connections: [],
-      data: {
-        flags: 0,
-      },
-    },
-    {
-      type: "domain",
-      value: "radar.krypton.ninja",
-      connections: [],
-      data: {
-        flags: 0,
-      },
-    },
-    {
-      type: "domain",
-      value: "www.krypton.ninja",
       connections: [],
       data: {
         flags: 0,
@@ -59,6 +27,21 @@ const EXAMPLE_DATA = {
       data: {
         flags: 2,
       },
+    },
+    {
+      type: "domain",
+      value: "github.krypton.ninja",
+      connections: [],
+      data: {
+        flags: 4,
+        possible_takeover: "github",
+      },
+    },
+    {
+      type: "email",
+      value: "root@krypton.ninja",
+      connections: [],
+      data: {},
     },
   ],
   data: {
@@ -165,6 +148,12 @@ export default function GraphView() {
                 <p>{error}</p>
               </Admonition>
             )}
+            <p>
+              The Graph View is in <strong>beta</strong> hence does not support
+              everything the tool may support. Currently it will only display
+              nodes of type <code>domain</code> and not the others (such as{" "}
+              <code>email</code> and <code>file</code>).
+            </p>
             {data ? (
               <>
                 <div style={{ height: "75vh", width: "100%" }}>
@@ -203,15 +192,17 @@ export default function GraphView() {
                   )}
                 </p>
                 <BrowserOnly>
-                  {() => (
-                    <small>
-                      On a PC you can also press{" "}
-                      <kbd>
-                        {navigator.userAgent.includes("Mac") ? "Cmd" : "Ctrl"}
-                      </kbd>{" "}
-                      + <kbd>V</kbd> to use the content of your clipboard.
-                    </small>
-                  )}
+                  {() =>
+                    !navigator.userAgent.match("iPhone|iPad|Android") && (
+                      <small>
+                        On a computer you can also press{" "}
+                        <kbd>
+                          {navigator.userAgent.includes("Mac") ? "Cmd" : "Ctrl"}
+                        </kbd>{" "}
+                        + <kbd>V</kbd> to use the content of your clipboard.
+                      </small>
+                    )
+                  }
                 </BrowserOnly>
               </>
             )}

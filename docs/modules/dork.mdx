@@ -1,14 +1,21 @@
 ---
 title: Dork
-description: Uses search operators and terms on search engines to try gather more information
+description: Uses search operators and terms on search engines to gather more information.
 ---
 
 import NoiseLevel from "@site/src/components/NoiseLevel";
 
 <NoiseLevel level="none" />
 
-Uses search operators and terms on search engines to try gather more information
+Uses search operators and terms on search engines to gather more information.
 
-The search term currently is `site:<domain>` and will parse subdomains on the first page of Google only.
+It currently uses the following search patterns:
 
-More search engines will be available soon, same for the information it will parse from the results.
+- `site:{domain}`; to find subdomains
+- `"@{}domain"`; to find mails
+
+## Configuration
+
+| Parameter       | Description                                                                | Default  |
+| --------------- | -------------------------------------------------------------------------- | -------- |
+| `search_engine` | The search engine to use. Can be one of the following: `ecosia` & `google` | `google` |

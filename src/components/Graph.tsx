@@ -12,21 +12,24 @@ import Modal from "react-modal";
 import DomainModal from "./Modals/DomainNode";
 
 function generateNodesAndEdges(node, parentId = null) {
-  const nodes = [
-    {
+  const nodes = [];
+  const edges = [];
+
+  // Currently the graph just supports domains
+  if (node.type === "domain") {
+    nodes.push({
       id: node.value,
       data: { label: node.value, type: node.type, ...node.data },
-    },
-  ];
-  const edges = parentId
-    ? [
-        {
-          id: `${parentId}-${node.value}`,
-          source: parentId,
-          target: node.value,
-        },
-      ]
-    : [];
+    });
+
+    if (parentId) {
+      edges.push({
+        id: `${parentId}-${node.value}`,
+        source: parentId,
+        target: node.value,
+      });
+    }
+  }
   node.connections.forEach((connection) => {
     const childNodesAndEdges = generateNodesAndEdges(connection, node.value);
     nodes.push(...childNodesAndEdges.nodes);
@@ -98,6 +101,7 @@ export default function Graph({ data }: GraphProps) {
             screenshot={selectedNodeData.screenshot}
             ports={selectedNodeData.ports}
             banners={selectedNodeData.banners}
+            possible_takeover_platform={selectedNodeData.possible_takeover}
           />
         );
     }

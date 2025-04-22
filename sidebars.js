@@ -24,9 +24,11 @@ const sidebars = {
       label: "Modules",
       items: [
         "modules/banner_grabber",
+        "modules/domain_takeover",
         "modules/dork",
         "modules/enumerate_files",
         "modules/enumerate_subdomains",
+        "modules/enumerate_vhosts",
         "modules/passive_dns",
         "modules/port_scanner",
         "modules/screenshot_grabber",
