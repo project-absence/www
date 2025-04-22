@@ -1,4 +1,4 @@
-name: Project Absence CD (Deploy Documentation)
+name: Project Absence CD (Deploy Website)
 
 on:
   workflow_dispatch:
@@ -13,11 +13,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy_documentation:
-    name: Deploy Documentation
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  deploy_website:
+    name: Deploy Website
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -28,7 +25,7 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm install
-      - name: Build documentation
+      - name: Build website
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
