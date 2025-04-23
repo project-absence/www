@@ -11,7 +11,15 @@ This module will aggressively try to find files based on the given wordlist and 
 
 ## Configuration
 
-| Parameter         | Description                                                     | Default                             |
-| ----------------- | --------------------------------------------------------------- | ----------------------------------- |
-| `wordlist`        | The path to the wordlist to use for this module.                | Fallback to `wordlist` CLI argument |
-| `files_extension` | The extension to append to the file names, **without** the dot. | `php`                               |
+| Parameter         | Description                                                     | Default                               |
+| ----------------- | --------------------------------------------------------------- | ------------------------------------- |
+| `wordlist`        | The path to the wordlist to use for this module.                | Fallback to `wordlist` CLI argument   |
+| `files_extension` | The extension to append to the file names, **without** the dot. | `php`                                 |
+| `match_status`    | The status codes to match.                                      | `200-299,301,302,307,401,403,405,500` |
+
+### Example(s)
+
+#### `match_status`
+
+- `200-299` -> All the successful responses
+- `200-299,401,403` -> All the successful responses, including unauthorized and forbidden
